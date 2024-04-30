@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <script>
+      var musik, background1, background2, background3, background4, background5, background6, ucapan1, ucapan2, ucapan3, ucapan4, ucapan5, ucapan6, kado1, kado2, kado3, kado4, tag;
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <title>MyTal❤️</title>
+  </head>
+  <body>
+    <div class="preload"><p>Loading dulu . . .</p></div>
+    <div class="open">
+      <div class="ilop">
+        <div class="lope" onclick="ilang()"><i class="love material-icons-sharp"> favorite </i></div>
+        <h3>Klik Love nya</h3>
+      </div>
+    </div>
+    <div class="bg">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="bg-love"></div>
+    <div class="content adascroll contentslide1">
+      <div class="slidekuy1">
+        <p id="typetxt" class="typetxt1"></p>
+        <button id="lanjut" class="lanjut1" onclick="tampilContent2()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+    <div class="content2 contentslide2">
+      <div class="txtPilihHadiah">
+        <p style="max-width: 70vw" class="typetxt2"></p>
+      </div>
+      <div class="hadiahku">
+        <div class="row">
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+        </div>
+        <div class="row">
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+        </div>
+      </div>
+    </div>
 
+    <div class="content adascroll contentslide4">
+      <div class="slidekuy2">
+        <p id="typetxt" class="typetxt4"></p>
+        <button id="lanjut" class="lanjut4" onclick="tampilContent5()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+
+    <div class="content contentadascroll contentslide5">
+      <div class="slidekuy">
+        <p id="typetxt" class="typetxt5"></p>
+        <button id="lanjut" class="lanjut5" onclick="tampilContent6()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+
+    <div class="content adascroll contentslide6">
+      <div class="slidekuy3">
+        <p id="typetxt" class="typetxt6"></p>
+        <button id="lanjut" class="lanjut6" onclick="tampilContent3()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+
+    <div class="content2 contentslide3">
+      <div class="txtPilihHadiah">
+        <p class="typetxt3"></p>
+      </div>
+      <div class="formwish">
+        <textarea name="" id="valuewish" rows="7"></textarea>
+      </div>
+      <button class="kirimwish" onclick="sendwish()">Kirim</button>
+    </div>
+
+    <div class="wm">
+      <p></p>
+    </div>
+
+    <script>
+      // ========================
+
+      // Musik
+      musik = "Ryan Mack - Forever and Ever and Always.mp3";
+
+      // Daftar Foto
+      background1 = "1.jpg";
+      background2 = "2.jpg";
+      background3 = "3.jpg";
+      background4 = "4.jpg";
+      background5 = "5.jpg";
+      background6 = "6.jpg";
+
+      // Ucapan Slide 1
+      ucapan1 =
+        "Assalamu'alaikum Talitha Amanda sayaangkuu❤️##Udah jam 00.00 ajee nihh😄##Happy 24th Birthday yaa wanita hebatku🎉🎁🎂🥳🎈#Semoga aku berhasil menjadi orang pertama yang ngucapin yaa☺️##Sebelumnya pilih kado dulu yukk. Hehe....##";
+
+      // Ucapan Slide 2 / Pilihan Kado
+      ucapan2 = "Karena masih belum bisa tiup lilin, jadi pilih kado virtual sementara ya. Saranku sih pilih kanan bawah aja😄";
+      kado1 = "Selamat kamu mendapatkan hatiku❤️";
+      kado2 = "Selamat kamu mendapatkan kasih sayang dan cintaku❤️";
+      kado3 = "Selamat kamu mendapatkan aku😁😄";
+      kado4 = "Will You Marry Me?💍";
+
+      // Ucapan Slide 3
+      ucapan3 =
+        "Sekali lagi aku ucapkan Selamat Ulang Tahun yaa sayaangku❤️#Semoga diumurmu yang ke 24 tahun ini, kamu bisa menjadi pribadi yg lebih baik lagi, makin rajin ibadahnya, makin berbakti ke Papa dan Mama serta bisa menjadi kakak yang baik buat dede, dimudahkan segala urusan dan tercapai segala mimpi mimpinya, dan yang paling penting senantiasa dalam perlindungan Allah dan juga dikaruniai kesehatan. Aamiin🤲🏻🤲🏻🤲🏻##";
+
+      // Ucapan Slide 4
+      ucapan4 =
+        "Terimakasih sudah benar benar berjuang sampai di titik sekarang ini.##I'M SO PROUD OF YOU❤️##Aku minta maaf kalo selama ini aku masih banyak kurangnya sebagai pasangan dan aku juga mau mengucapkan banyak terimakasih karena kamu mau menerima segala kelebihan dan kekuranganku. Dikala aku sibuk kerja, kamu bener bener dengan sabar nungguin kabar dari aku sambil terus ngabarin kamu lagi apa, lagi dimana, dan sama siapa. Hal itu benar benar membuat aku merasa tenang dan sangat dihargai. Karena disaat menjalani hubungan LDR, selain sama sama harus saling percaya, kabar dan komunikasi yang baik juga merupakan suatu hal yg penting. Dan aku mendapatkan itu semua dari kamu. Makasih banyak ya sayaaangku❤️##Mungkin aku bukanlah laki laki yg sempurna atau mungkin yg kamu harapkan di awal. Aku hanya laki laki biasa yg hadir di dalam kehidupanmu secara tidak sengaja dan kebetulan kita mempunyai perasaan yg sama. Tapi, dari sekian banyak kekuranganku, insyaAllah aku akan terus berusaha menjadi versi terbaik dalam diriku dalam hal mencintai dan menjadi pasanganmu. I'm so lucky to have you and don't leave me😊☺️##I Love You on Your Birthday, Everyday, and Forever.##";
+
+      // Ucapan Slide 5
+      ucapan5 =
+        "Selamat juga yg sudah sidang Thesis🎉🎉🎉#Semangaat revisian, nyusun berkas untuk Yudisium, dan Wis-udah yaaa😁😁##Setelah ini kamu akan menentukan jalan hidupmu berikutnya. Jangan khawatir, apapun yg kamu pilih, aku akan selalu ngesupport pilihanmu dan aku akan selalu ada buat kamu.##I LOVE YOU SO MUCH❤️##Regards,#Your Love,#Muhammad Irfan Ashadi☺️##";
+
+      // Ucapan Slide 6
+      ucapan6 = "Isi wish kamu disini ya";
+
+      // Watermark
+      tag = "";
+
+      const swalo = Swal.mixin({ allowOutsideClick: false, showCancelButton: false, customClass: { popup: "border-radius" } });
+
+      // Pop up setelah kado
+      async function setelahKado(inijanganhapus) {
+        await swalo.fire({ title: "Lanjut gak nihh", confirmButtonText: "Lanjuttt" });
+
+        inijanganhapus();
+      }
+
+      // Pop up setelah wish
+      async function sendwish() {
+        pesanku = valuewish.value;
+        if (pesanku) {
+          await swalo.fire({ confirmButtonText: "OK", title: "Kirim ke wa aku ya" });
+          location.assign(`https://wa.me/6285203539162?text=${pesanku}`);
+        } else {
+          await swalo.fire({ confirmButtonText: "OK", title: "Jangan dikosongin ya" });
+        }
+      }
+    </script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
